@@ -1,0 +1,9 @@
+.necessityCard {
+  cursor: pointer;
+
+  border: none;
+
+  &.checked {
+    border: 1px solid #c83d2f;
+  }
+}

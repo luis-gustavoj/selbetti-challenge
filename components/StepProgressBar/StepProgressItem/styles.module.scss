@@ -1,0 +1,73 @@
+.stepProgressItem {
+  --progress-color: #707070;
+
+  &.active {
+    --progress-color: #c83d2f;
+  }
+
+  &.currentActive {
+    --progress-color: #c83d2f;
+
+    p {
+      color: #c83d2f;
+      font-weight: bold;
+    }
+  }
+
+  &.notActive {
+    p {
+      color: var(--progress-color);
+    }
+  }
+
+  color: #bfbfbf;
+
+  .progressBall {
+    margin: auto;
+    width: 15px;
+    height: 15px;
+
+    border-radius: 999px;
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    background-color: var(--progress-color);
+  }
+
+  p {
+    font-size: 10px;
+
+    text-align: center;
+  }
+
+  &:not(&:first-child) {
+    .progressBall {
+      &::before {
+        content: " ";
+
+        height: 3px;
+        width: 152.5px;
+
+        transform: translateZ(-999px);
+
+        position: absolute;
+
+        bottom: 40%;
+        right: 0;
+
+        z-index: 0;
+
+        background: var(--progress-color);
+      }
+    }
+  }
+
+  &:not(&:first-child):not(&:last-child) {
+    .progressBall {
+      &::before {
+        width: 158px;
+      }
+    }
+  }
+}

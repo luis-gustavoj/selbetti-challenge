@@ -1,0 +1,21 @@
+.infoCard {
+  text-align: center;
+
+  .cardTitle {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #c83d2f;
+    margin: 0;
+  }
+
+  .cardDescription {
+    font-size: 0.725rem;
+    color: #707070;
+    margin: 0;
+  }
+
+  &:not(&:first-child):not(&:last-child) {
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+  }
+}
